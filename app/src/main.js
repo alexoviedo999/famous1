@@ -20,7 +20,7 @@ define(function(require, exports, module) {
     // your app here
     var logo = new ImageSurface({
         size: [100, 100],
-        content: '/content/images/famous_logo.png'
+        content: 'http://s3.amazonaws.com/xtunes-alex/uploads/images/kaya.jpg?AWSAccessKeyId=AKIAINHKADQCXVDB3XJA&Expires=1398817064&Signature=WSZT36M7n6FmBrYqYPprHAp1ofU%3D'
     });
 
     var logoModifier = new StateModifier({
@@ -76,9 +76,8 @@ define(function(require, exports, module) {
     PE.attach(spring, particle);
     PE.addBody(particle);
 
-  // Create the scene, applying a top level modifier to center
-  // the scene vertically in the viewport
-
+    // Create the scene, applying a top level modifier to center
+    // the scene vertically in the viewport
 
     // mainCtx.add(logoModifier).add(logo).add(particle);
     mainCtx.add(transform).add(surface).add(particle);
